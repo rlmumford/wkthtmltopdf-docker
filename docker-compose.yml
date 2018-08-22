@@ -1,0 +1,23 @@
+---
+version: "3.5"
+services:
+
+  wkhtmltopdf:
+    image: ciricihq/wkhtmltopdf-aas
+    container_name: "wkhtmltopdf"
+    restart: always
+    expose:
+      - 80
+    networks:
+      - wkweb
+      - ckweb
+    labels:
+      - "traefik.enable=false"
+
+networks:
+  ckweb:
+    external: true
+    name: ckweb
+  wkweb:
+    external: false
+    name: wkweb
