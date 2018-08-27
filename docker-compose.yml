@@ -3,7 +3,8 @@ version: "3.5"
 services:
 
   wkhtmltopdf:
-    image: ciricihq/wkhtmltopdf-aas
+#   image: ciricihq/wkhtmltopdf-aas:latest
+    image: counselkitdev/wkhtmltopdf:klr
     container_name: "wkhtmltopdf"
     restart: always
     expose:
