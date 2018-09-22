@@ -9,6 +9,11 @@ services:
     restart: always
     expose:
       - 80
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2000k"
+        max-file: "5"
     networks:
       - wkweb
       - ckweb
